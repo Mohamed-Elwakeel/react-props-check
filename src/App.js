@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Profile } from "./profile/Profile";
+import ME from "../src/assets/me.jpg";
+import PropTypes from "prop-types";
+
+const myProfile = {
+  fullName: "Mohamed Hassan Elwakeel",
+  profession: "Civil Engineer",
+  bio: "A civil engineer graduate who is aspiring to be a fullstack web developer.",
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Profile</h1>
+      <Profile {...myProfile}>
+        <img src={ME} alt="Photo of me!!" />
+      </Profile>
     </div>
   );
 }
